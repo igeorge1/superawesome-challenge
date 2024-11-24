@@ -332,7 +332,7 @@ model: [4_hero_villain_five_superpowers_model.sql](ansible-dbt-orchestration/pla
 </details>
 
 ### Project Structure:
-
+.
 ├── ansible-dbt-orchestration/playbooks
 │   ├── dbt_super                   	# DBT project files  
 │       ├── models/  					# DBT models. These address the assignment questions
