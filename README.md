@@ -39,9 +39,10 @@ The implementation follows dbt best practices, leveraging Jinja template tags fo
 Importing the CSVs as dbt seeds and then preparing the source data for the final models. [Source preparation data models.](ansible-dbt-orchestration/playbooks/dbt_super/src/)
 
 **Lineage graph of the dbt implementation.**
-<sub>Can also be obtained by running **dbt docs generate** and **dbt docs serve**.</sub>
 
 ![Lineage graph of the project implementation](images/lineage_graph.png)
+
+<sub>Can also be obtained by running **dbt docs generate** and **dbt docs serve**.</sub>
 
 ### The questions in the assessment are resolved in the dbt models as it follows:
 
