@@ -51,6 +51,7 @@ Importing the CSVs as dbt seeds and then preparing the source data for the final
 
 model: [1_top10_villains_model.sql](ansible-dbt-orchestration/playbooks/dbt_super/models/1_top10_villains_model.sql)
 
+results:
 
 |Publisher    |Name           |appearances|
 |-------------|---------------|-----------|
@@ -83,6 +84,8 @@ model: [1_top10_villains_model.sql](ansible-dbt-orchestration/playbooks/dbt_supe
 
 model: [2_top10_heroes_model.sql](ansible-dbt-orchestration/playbooks/dbt_super/models/2_top10_heroes_model.sql)
 
+results:
+
 |Publisher    |Name             |appearances|
 |-------------|-----------------|-----------|
 |DC Comics    |Batman           |3,093      |
@@ -113,6 +116,8 @@ model: [2_top10_heroes_model.sql](ansible-dbt-orchestration/playbooks/dbt_super/
 
 model: [3_top5_superpowers_model.sql](ansible-dbt-orchestration/playbooks/dbt_super/models/3_top5_superpowers_model.sql)
 
+results:
+
 |superpower    |superpower_count|
 |--------------|----------------|
 |Agility       |625             |
@@ -127,6 +132,8 @@ model: [3_top5_superpowers_model.sql](ansible-dbt-orchestration/playbooks/dbt_su
 <summary>Which hero and villain have the 5 most common superpowers?</summary>
 
 model: [4_hero_villain_five_superpowers_model.sql](ansible-dbt-orchestration/playbooks/dbt_super/models/4_hero_villain_five_superpowers_model.sql)
+
+results:
 
 |name                     |
 |-------------------------|
