@@ -36,6 +36,9 @@ For removing the virtual environment and logs:
 ### Project Details:
 
 The implementation follows dbt best practices, leveraging Jinja template tags for flexibility and modularity. By utilizing DuckDB, the project ensures seamless integration with dbt, making it highly suitable for Local-First Development while delivering high performance.
+Importing the CSVs as dbt seeds and then preparing the source data for the final models. 
+
+[source preparation data models: ](ansible-dbt-orchestration/playbooks/dbt_super/src/)
 
 ![Lineage graph of the project implementation](images/lineage_graph.png)
 
@@ -106,6 +109,6 @@ model: [1_top10_villains_model.sql](ansible-dbt-orchestration/playbooks/dbt_supe
 
 
 ### Optional:
-For querying the database through DB GUI clients you can use general-purpose database clients such as DBeaver.
-run **dbt docs generate** for generating the dbt objects documentation.
-run **dbt docs serve** for generating a local lightweight server where you can browse the documentation.
+- For querying the database through DB GUI clients you can use general-purpose database clients such as DBeaver.
+- run **dbt docs generate** for generating the dbt objects documentation.
+- run **dbt docs serve** for generating a local lightweight server where you can browse the documentation.
