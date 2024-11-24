@@ -32,6 +32,7 @@ In terminal execute:
 For removing the virtual environment and logs:
 `make clean`
 
+
 ### Project Details:
 
 The implementation follows dbt best practices, leveraging Jinja template tags for flexibility and modularity. By utilizing DuckDB, the project ensures seamless integration with dbt, making it highly suitable for Local-First Development while delivering high performance.
@@ -41,7 +42,7 @@ The implementation follows dbt best practices, leveraging Jinja template tags fo
 The questions in the assessment are resolved in the dbt models as it follows:
 
 <details>
-<summary>- Top 10 villains by appearance per publisher 'DC', 'Marvel' and 'other'</summary>
+<summary>**Top 10 villains by appearance per publisher 'DC', 'Marvel' and 'other'**</summary>
 
 1_top10_villains_model.sql
 
