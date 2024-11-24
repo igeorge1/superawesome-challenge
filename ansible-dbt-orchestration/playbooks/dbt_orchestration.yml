@@ -1,0 +1,44 @@
+---
+- name: Orchestrate Superawesome dbt project
+  hosts: localhost
+  connection: local
+  become: no
+  gather_facts: true
+  vars:
+    dbt_project_path: "{{ playbook_dir }}/dbt_super"
+    profiles_path: "{{ playbook_dir }}/dbt_super"
+    ansible_python_interpreter: "{{ lookup('env', 'PYTHON_PATH') | default('/usr/bin/python3', true) }}"
+    # ansible_python_interpreter: auto
+    # ansible_python_interpreter: /usr/local/bin/python3.11
+    # ansible_user: "{{ ansible_env.USER }}" 
+
+  tasks:
+    - name: Make sure that dbt is installed
+      pip:
+        name: dbt-duckdb
+        state: present
+
+    - name: Set up DBT project directory
+      copy:
+        src: "dbt_super/"
+        dest: "{{ dbt_project_path }}"
+        mode: '0755'
+        owner: "{{ lookup('env', 'USER') }}"
+
+    - name: Run dbt seed to populate data
+      command: "dbt seed --project-dir {{ dbt_project_path }} --profiles-dir {{ profiles_path }}"
+      args:
+        chdir: "{{ dbt_project_path }}"
+      register: dbt_seed_result
+
+    - name: Run dbt models
+      command: "dbt run --project-dir {{ dbt_project_path }} --profiles-dir {{ profiles_path }}"
+      args:
+        chdir: "{{ dbt_project_path }}"
+      register: dbt_run_result
+      when: dbt_seed_result.rc == 0  # Ensure seed is successful before running models
+
+    - name: Clean up temporary dbt artifacts
+      command: "dbt clean --project-dir {{ dbt_project_path }} --profiles-dir {{ profiles_path }}"
+      args:
+        chdir: "{{ dbt_project_path }}"
