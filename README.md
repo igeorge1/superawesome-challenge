@@ -350,7 +350,8 @@ results:
 │   │   ├── dbt_super           # DBT project files 
 │   │   │   ├── models          # DBT models
 │   │   │       └── src         # Data preparation for the final models
-│   │   ├   ├── profiles.yaml   # DuckDB configuration   
+│   │   ├   ├── profiles.yaml   # DuckDB configuration
+│   │   ├   ├── seeds           # CSV files  
 ├── makefile                    # Setup automation
 ├── README.md                   # Project documentation
 ├── requirements.txt            # Python package dependencies
