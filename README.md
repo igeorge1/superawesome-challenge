@@ -331,7 +331,7 @@ model: [4_hero_villain_five_superpowers_model.sql](ansible-dbt-orchestration/pla
 
 </details>
 
-### File Structure:
+### Project Structure:
 
 ```
 .
@@ -341,33 +341,14 @@ model: [4_hero_villain_five_superpowers_model.sql](ansible-dbt-orchestration/pla
 │   ├── playbooks
 │   │   ├── dbt_super           # DBT project files 
 │   │   │   ├── models          # DBT models
-│   │   │       └── src         # Preparing data for the final models
+│   │   │       └── src         # Data preparation for the final models
 │   │   ├   ├── profiles.yaml   # DuckDB configuration   
 ├── makefile                    # Setup automation
 ├── README.md                   # Project documentation
 ├── requirements.txt            # Python package dependencies
 └── images                      # Images needed for project documentation
-└── challenge_requirements		# Assignment information and files
+└── challenge_requirements      # Assignment information and files
 ```
-.
-├── ansible-dbt-orchestration/playbooks
-│   ├── dbt_super                   	# DBT project files  
-│       ├── models/  					# DBT models. These address the assignment questions
-│       │   └── src/              		# Preparing data for using it in the models
-│       └── profiles.yml                # DuckDB configuration   
-│   └── dbt_orchestration.yml			# Ansible playbook  					
-├
-│   └── inventory/  
-│       ├── hosts.ini  					# Lists of hosts that ansible can manage (localhost only)
-│
-│ 
-├── challenge_requirements				# Assignment information and files
-│
-├── makefile                            # Setup automation
-├── README.md                           # Project documentation
-└── requirements.txt                    # Python package dependencies
-└── images                   			# Images needed for project documentation
-
 
 
 ### Optional:
