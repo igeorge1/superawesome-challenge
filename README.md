@@ -39,12 +39,12 @@ The implementation follows dbt best practices, leveraging Jinja template tags fo
 
 ![Lineage graph of the project implementation](images/lineage_graph.png)
 
-The questions in the assessment are resolved in the dbt models as it follows:
+**The questions in the assessment are resolved in the dbt models as it follows:**
 
 <details>
-<summary>**Top 10 villains by appearance per publisher 'DC', 'Marvel' and 'other'**</summary>
+<summary>Top 10 villains by appearance per publisher 'DC', 'Marvel' and 'other'</summary>
 
-1_top10_villains_model.sql
+model: [1_top10_villains_model.sql](ansible-dbt-orchestration/playbooks/dbt_super/models/1_top10_villains_model.sql)
 
 
 |Publisher    |Name           |appearances|
