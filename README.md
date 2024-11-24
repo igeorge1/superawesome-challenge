@@ -36,7 +36,7 @@ For removing the virtual environment and logs:
 
 The implementation follows dbt best practices, leveraging Jinja template tags for flexibility and modularity. By utilizing DuckDB, the project ensures seamless integration with dbt, making it highly suitable for Local-First Development while delivering high performance.
 
-(![/tree/main/images/lineage_graph.png])
+![Lineage graph of the project implementation](images/lineage_graph.png)
 
 The questions in the assessment are resolved in the dbt models as it follows:
 
