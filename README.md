@@ -49,7 +49,7 @@ Importing the CSVs as dbt seeds and then preparing the source data for the final
 <details>
 <summary>Top 10 villains by appearance per publisher 'DC', 'Marvel' and 'other'</summary>
 
-model: [1_top10_villains_model.sql](ansible-dbt-orchestration/playbooks/dbt_super/models/1_top10_villains_model.sql)
+model: [top10_villains_model.sql](ansible-dbt-orchestration/playbooks/dbt_super/models/top10_villains_model.sql)
 
 results:
 
@@ -82,7 +82,7 @@ results:
 <details>
 <summary>Top 10 heroes by appearance per publisher 'DC', 'Marvel' and 'other'</summary>
 
-model: [2_top10_heroes_model.sql](ansible-dbt-orchestration/playbooks/dbt_super/models/2_top10_heroes_model.sql)
+model: [top10_heroes_model.sql](ansible-dbt-orchestration/playbooks/dbt_super/models/top10_heroes_model.sql)
 
 results:
 
@@ -114,7 +114,7 @@ results:
 <details>
 <summary>What are the 5 most common superpowers?</summary>
 
-model: [3_top5_superpowers_model.sql](ansible-dbt-orchestration/playbooks/dbt_super/models/3_top5_superpowers_model.sql)
+model: [top5_superpowers_model.sql](ansible-dbt-orchestration/playbooks/dbt_super/models/top5_superpowers_model.sql)
 
 results:
 
@@ -131,7 +131,7 @@ results:
 <details>
 <summary>Which hero and villain have the 5 most common superpowers?</summary>
 
-model: [4_hero_villain_five_superpowers_model.sql](ansible-dbt-orchestration/playbooks/dbt_super/models/4_hero_villain_five_superpowers_model.sql)
+model: [hero_villain_five_superpowers_model.sql](ansible-dbt-orchestration/playbooks/dbt_super/models/hero_villain_five_superpowers_model.sql)
 
 results:
 
@@ -362,5 +362,3 @@ results:
 
 ### Optional:
 - For querying the database through DB GUI clients you can use general-purpose database clients such as DBeaver.
-- run **dbt docs generate** for generating the dbt objects documentation.
-- run **dbt docs serve** for generating a local lightweight server where you can browse the documentation.
