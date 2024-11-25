@@ -15,7 +15,7 @@ This project is a fully automated solution for managing **dbt** workflows with *
 ### Prerequisites
 
 1. **Python**: Version 3.8 or later   
-2. **Make**: To execute the `Makefile`  
+2. **Make**: To execute the `makefile`  
 
 
 ### How to run it
